@@ -1,0 +1,3332 @@
+/* =========================================================
+   DR. YAHYA ETHAWI
+   PREMIUM HEALTHCARE + INNOVATION WEBSITE
+   RESPONSIVE SYSTEM
+   ========================================================= */
+
+
+/* =========================================================
+   01. LARGE DESKTOP — 1440px AND BELOW
+   ========================================================= */
+
+@media (max-width: 1440px) {
+
+    .container {
+        width: min(
+            calc(100% - (var(--page-padding-laptop) * 2)),
+            var(--container-2xl)
+        );
+    }
+
+    .container--narrow,
+    .container--compact,
+    .container--full {
+        width: min(
+            calc(100% - (var(--page-padding-laptop) * 2)),
+            var(--container-2xl)
+        );
+    }
+
+    .hero__inner {
+        gap: 60px;
+    }
+
+    .hero__title {
+        font-size: clamp(3.4rem, 6.6vw, 6.7rem);
+    }
+
+    .hero__visual {
+        min-height: 560px;
+    }
+
+    .noor__orbit {
+        width: 530px;
+        height: 530px;
+    }
+
+    .noor__orbit--outer {
+        width: 700px;
+        height: 700px;
+    }
+
+    .noor__core {
+        width: 300px;
+        height: 300px;
+    }
+
+    .menah__stage {
+        gap: var(--space-8);
+    }
+
+    .future__connector {
+        left: calc(33.333% - 14px);
+        right: calc(33.333% - 14px);
+    }
+}
+
+
+/* =========================================================
+   02. LAPTOP — 1200px AND BELOW
+   ========================================================= */
+
+@media (max-width: 1200px) {
+
+    html {
+        scroll-padding-top: var(--header-height-tablet);
+    }
+
+    .container {
+        width: min(
+            calc(100% - (var(--page-padding-tablet) * 2)),
+            var(--container-xl)
+        );
+    }
+
+    .container--narrow,
+    .container--compact,
+    .container--full {
+        width: min(
+            calc(100% - (var(--page-padding-tablet) * 2)),
+            var(--container-xl)
+        );
+    }
+
+
+   /* =========================================================
+   HEADER — TABLET / MOBILE
+========================================================= */
+
+@media (max-width: 992px) {
+
+    html {
+        scroll-padding-top:
+            var(--header-height-tablet);
+    }
+
+    .site-header {
+        padding-top: 12px;
+    }
+
+    .site-header__shell {
+        width:
+            calc(
+                100% -
+                (var(--page-padding-tablet) * 2)
+            );
+    }
+
+    .site-header__inner {
+        min-height: 62px;
+
+        padding:
+            7px
+            8px
+            7px
+            18px;
+    }
+
+    .site-header__nav {
+        display: none;
+    }
+
+    .site-header__action {
+        margin-left: auto;
+    }
+
+    .site-header__menu-toggle {
+        display: inline-flex;
+    }
+
+
+    /* Mobile menu */
+
+    .site-header__mobile-menu {
+        position: fixed;
+
+        top:
+            calc(
+                var(--header-height-tablet) +
+                12px
+            );
+
+        right:
+            var(--page-padding-tablet);
+
+        left:
+            var(--page-padding-tablet);
+
+        z-index:
+            var(--z-mobile-menu);
+
+        display: flex;
+
+        flex-direction: column;
+
+        max-height:
+            calc(
+                100svh -
+                var(--header-height-tablet) -
+                28px
+            );
+
+        padding:
+            12px;
+
+        overflow-y: auto;
+
+        border:
+            1px solid
+            rgba(
+                255,
+                255,
+                255,
+                0.09
+            );
+
+        border-radius:
+            24px;
+
+        background:
+            rgba(
+                6,
+                17,
+                31,
+                0.94
+            );
+
+        box-shadow:
+            0 22px 70px
+            rgba(
+                0,
+                0,
+                0,
+                0.28
+            );
+
+        backdrop-filter:
+            blur(24px);
+
+        -webkit-backdrop-filter:
+            blur(24px);
+
+        opacity: 0;
+
+        visibility: hidden;
+
+        pointer-events: none;
+
+        transform:
+            translateY(-10px)
+            scale(0.985);
+
+        transform-origin:
+            top center;
+
+        transition:
+            opacity 0.28s ease,
+            visibility 0.28s ease,
+            transform 0.28s ease;
+    }
+
+    .site-header__mobile-menu.is-open {
+        opacity: 1;
+
+        visibility: visible;
+
+        pointer-events: auto;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
+    .site-header__mobile-links {
+        display: flex;
+
+        flex-direction: column;
+    }
+
+    .site-header__mobile-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        min-height: 58px;
+
+        padding:
+            0 8px;
+
+        color:
+            var(--color-text-soft);
+
+        font-family:
+            var(--font-display);
+
+        font-size:
+            1rem;
+
+        font-weight:
+            var(--font-weight-medium);
+
+        letter-spacing:
+            0.03em;
+
+        border-bottom:
+            1px solid
+            rgba(
+                255,
+                255,
+                255,
+                0.07
+            );
+
+        text-decoration: none;
+
+        transition:
+            color 0.25s ease,
+            padding-left 0.25s ease;
+    }
+
+    .site-header__mobile-link:last-child {
+        border-bottom: 0;
+    }
+
+    .site-header__mobile-link::after {
+        content: "↗";
+
+        color:
+            var(--color-text-muted);
+
+        font-size:
+            0.9rem;
+
+        transition:
+            color 0.25s ease,
+            transform 0.25s ease;
+    }
+
+    .site-header__mobile-link:hover,
+    .site-header__mobile-link.is-active {
+        color:
+            var(--color-primary);
+
+        padding-left:
+            13px;
+    }
+
+    .site-header__mobile-link:hover::after,
+    .site-header__mobile-link.is-active::after {
+        color:
+            var(--color-primary);
+
+        transform:
+            translate(
+                2px,
+                -2px
+            );
+    }
+
+    .site-header__mobile-cta {
+        padding-top:
+            14px;
+    }
+
+    .site-header__cta--mobile {
+        width: 100%;
+
+        min-height: 52px;
+    }
+}
+/* =========================================================
+   HEADER — MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    html {
+        scroll-padding-top:
+            var(--header-height-mobile);
+    }
+
+    .site-header {
+        padding-top: 10px;
+    }
+
+    .site-header__shell {
+        width:
+            calc(
+                100% -
+                (var(--page-padding-mobile) * 2)
+            );
+    }
+
+    .site-header__inner {
+        min-height: 58px;
+
+        padding:
+            6px
+            7px
+            6px
+            16px;
+    }
+
+    .site-header__brand {
+        font-size: 0.78rem;
+
+        letter-spacing:
+            0.10em;
+    }
+
+    .site-header__cta {
+        display: none;
+    }
+
+    .site-header__menu-toggle {
+        width: 42px;
+        height: 42px;
+    }
+
+    .site-header__mobile-menu {
+        top:
+            calc(
+                var(--header-height-mobile) +
+                10px
+            );
+
+        right:
+            var(--page-padding-mobile);
+
+        left:
+            var(--page-padding-mobile);
+
+        max-height:
+            calc(
+                100svh -
+                var(--header-height-mobile) -
+                24px
+            );
+    }
+}
+
+
+/* =========================================================
+   HEADER — VERY SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .site-header__shell {
+        width:
+            calc(100% - 24px);
+    }
+
+    .site-header__inner {
+        padding-left: 14px;
+    }
+
+    .site-header__brand {
+        font-size: 0.72rem;
+
+        letter-spacing:
+            0.085em;
+    }
+
+    .site-header__menu-toggle {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+    /* =============================================
+       HERO
+       ============================================= */
+
+    .hero__inner {
+        grid-template-columns: minmax(0, 1fr) minmax(320px, 0.8fr);
+        gap: 48px;
+    }
+
+    .hero__title {
+        font-size: clamp(3.2rem, 6.3vw, 5.8rem);
+    }
+
+    .hero__visual {
+        min-height: 510px;
+    }
+
+    .hero__data-node--one {
+        right: -2%;
+    }
+
+    .hero__data-node--two {
+        left: -4%;
+    }
+
+
+    /* =============================================
+       IDENTITY
+       ============================================= */
+
+    .identity__intro {
+        gap: 60px;
+    }
+
+    .identity__pillar {
+        padding: var(--card-padding-md);
+    }
+
+
+    /* =============================================
+       JOURNEY
+       ============================================= */
+
+    .journey__items {
+        grid-template-columns: repeat(6, minmax(100px, 1fr));
+        gap: 14px;
+    }
+
+    .journey__item:nth-child(even) {
+        padding-top: 190px;
+    }
+
+    .journey__item:nth-child(odd) {
+        padding-bottom: 190px;
+    }
+
+    .journey__card {
+        padding: 18px;
+    }
+
+
+    /* =============================================
+       MENAH
+       ============================================= */
+
+    .menah__stage {
+        grid-template-columns: minmax(180px, 0.65fr) minmax(0, 1.7fr) minmax(180px, 0.65fr);
+        padding: var(--space-8);
+    }
+
+    .menah__annotation--left {
+        left: 4%;
+    }
+
+    .menah__annotation--right {
+        right: 4%;
+    }
+
+
+    /* =============================================
+       NOOR
+       ============================================= */
+
+    .noor__experience {
+        min-height: 620px;
+    }
+
+    .noor__orbit {
+        width: 470px;
+        height: 470px;
+    }
+
+    .noor__orbit--outer {
+        width: 620px;
+        height: 620px;
+    }
+
+    .noor__core {
+        width: 270px;
+        height: 270px;
+    }
+
+    .noor__stats {
+        margin-top: var(--space-13);
+    }
+
+    .noor__capabilities {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+
+    /* =============================================
+       NOOR PROCESS
+       ============================================= */
+
+    .noor-process__steps {
+        grid-template-columns: repeat(10, minmax(78px, 1fr));
+        gap: 10px;
+    }
+
+    .noor-process__step:nth-child(even) {
+        padding-top: 125px;
+    }
+
+    .noor-process__step:nth-child(odd) {
+        padding-bottom: 125px;
+    }
+
+    .noor-process__card {
+        padding: 13px;
+    }
+
+
+    /* =============================================
+       MONITORING
+       ============================================= */
+
+    .monitoring__featured {
+        grid-template-columns: minmax(0, 1.35fr) minmax(250px, 0.65fr);
+    }
+
+    .monitoring__visualization-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+
+    /* =============================================
+       FUTURE
+       ============================================= */
+
+    .future__stage {
+        padding: var(--card-padding-md);
+    }
+
+
+    /* =============================================
+       ACADEMIC
+       ============================================= */
+
+    .academic__layout {
+        gap: 60px;
+    }
+
+
+    /* =============================================
+       COLLABORATION
+       ============================================= */
+
+    .collaboration__layout {
+        gap: 60px;
+    }
+
+
+    /* =============================================
+       FOOTER
+       ============================================= */
+
+    .site-footer__top {
+        gap: 60px;
+    }
+}
+
+
+/* =========================================================
+   03. TABLET / SMALL LAPTOP — 992px AND BELOW
+   ========================================================= */
+
+@media (max-width: 992px) {
+
+    html {
+        scroll-padding-top: var(--header-height-tablet);
+    }
+
+    .section__inner {
+        padding-block: var(--section-space-md);
+    }
+
+
+    /* =============================================
+       HEADER → MOBILE NAVIGATION MODE
+       ============================================= */
+
+    .site-header__nav {
+        display: none;
+    }
+
+    .site-header__menu-toggle {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        width: 46px;
+        height: 46px;
+
+        border:
+            var(--border-width-thin)
+            solid
+            var(--color-border);
+
+        border-radius: var(--radius-md);
+
+        background: rgba(255, 255, 255, 0.025);
+
+        color: var(--color-text);
+
+        transition:
+            border-color var(--transition-base),
+            background-color var(--transition-base),
+            color var(--transition-base);
+    }
+
+    .site-header__menu-toggle:hover,
+    .site-header__menu-toggle.is-active {
+        border-color: var(--color-border-strong);
+        background: rgba(57, 208, 214, 0.06);
+        color: var(--color-primary);
+    }
+
+
+    /* =============================================
+       MOBILE MENU PANEL
+       ============================================= */
+
+    .site-header__mobile-menu {
+        position: fixed;
+        inset: var(--header-height-tablet) 0 0;
+
+        z-index: var(--z-mobile-menu);
+
+        display: flex;
+        flex-direction: column;
+
+        padding:
+            var(--space-10)
+            var(--page-padding-tablet)
+            var(--space-12);
+
+        background: rgba(3, 11, 20, 0.98);
+
+        border-top:
+            var(--border-width-thin)
+            solid
+            var(--color-border);
+
+        overflow-y: auto;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+
+        transform: translateY(-10px);
+
+        transition:
+            opacity var(--transition-base),
+            visibility var(--transition-base),
+            transform var(--transition-base);
+    }
+
+    .site-header__mobile-menu.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translateY(0);
+    }
+
+    .site-header__mobile-links {
+        display: flex;
+        flex-direction: column;
+
+        border-top:
+            var(--border-width-thin)
+            solid
+            var(--color-border);
+    }
+
+    .site-header__mobile-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        min-height: 72px;
+
+        padding-inline: 4px;
+
+        border-bottom:
+            var(--border-width-thin)
+            solid
+            var(--color-border);
+
+        color: var(--color-text-soft);
+
+        font-family: var(--font-display);
+        font-size: clamp(1.35rem, 3vw, 2rem);
+        font-weight: var(--font-weight-medium);
+
+        transition:
+            color var(--transition-base),
+            padding-left var(--transition-base);
+    }
+
+    .site-header__mobile-link::after {
+        content: "↗";
+
+        color: var(--color-text-muted);
+
+        font-size: 1rem;
+
+        transition:
+            color var(--transition-fast),
+            transform var(--transition-fast);
+    }
+
+    .site-header__mobile-link:hover,
+    .site-header__mobile-link.is-active {
+        color: var(--color-primary-soft);
+        padding-left: 8px;
+    }
+
+    .site-header__mobile-link:hover::after {
+        color: var(--color-primary);
+        transform: translate(3px, -3px);
+    }
+
+    .site-header__mobile-cta {
+        margin-top: auto;
+        padding-top: var(--space-10);
+    }
+
+    .site-header__mobile-cta .btn {
+        width: 100%;
+    }
+
+
+    /* =============================================
+       HERO
+       ============================================= */
+
+    .hero__inner {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        padding-top: calc(
+            var(--header-height-tablet) + var(--space-15)
+        );
+        padding-bottom: var(--space-15);
+    }
+
+    .hero__content {
+        max-width: 760px;
+    }
+
+    .hero__visual {
+        min-height: 560px;
+
+        justify-content: flex-start;
+    }
+
+    .hero__portrait-wrap {
+        width: min(100%, 520px);
+    }
+
+    .hero__visual-frame {
+        inset: 5% 3% 5% 0;
+    }
+
+    .hero__data-node--one {
+        right: 2%;
+    }
+
+    .hero__data-node--two {
+        left: 0;
+    }
+
+
+    /* =============================================
+       IDENTITY
+       ============================================= */
+
+    .identity__intro {
+        grid-template-columns: 1fr;
+
+        gap: var(--space-7);
+
+        margin-bottom: var(--space-12);
+    }
+
+    .identity__pillars {
+        grid-template-columns: 1fr;
+    }
+
+    .identity__pillar {
+        min-height: 220px;
+
+        border-right: 0;
+        border-bottom:
+            var(--border-width-thin)
+            solid
+            var(--color-border);
+    }
+
+    .identity__pillar:last-child {
+        border-bottom: 0;
+    }
+
+    .identity__pillar-index {
+        margin-bottom: var(--space-9);
+    }
+
+
+    /* =============================================
+       JOURNEY
+       ============================================= */
+
+    .journey__timeline-wrap {
+        padding-block: var(--space-6);
+    }
+
+    .journey__track {
+        left: 7px;
+        right: auto;
+        top: 0;
+        bottom: 0;
+
+        width: 1px;
+        height: auto;
+
+        transform: none;
+    }
+
+    .journey__progress {
+        left: 7px;
+        top: 0;
+
+        width: 1px;
+        height: 0;
+
+        transform: none;
+    }
+
+    .journey__items {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+        padding-left: 44px;
+    }
+
+    .journey__item,
+    .journey__item:nth-child(even),
+    .journey__item:nth-child(odd) {
+        min-height: auto;
+
+        padding: 0 0 var(--space-10) !important;
+    }
+
+    .journey__item:last-child {
+        padding-bottom: 0 !important;
+    }
+
+    .journey__node-wrap,
+    .journey__item:nth-child(even) .journey__node-wrap {
+        left: -44px;
+        top: 0;
+
+        transform: none;
+    }
+
+    .journey__card {
+        max-width: none;
+    }
+
+
+    /* =============================================
+       EXPERTISE
+       ============================================= */
+
+    .expertise__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .expertise__item {
+        min-height: 240px;
+    }
+
+
+    /* =============================================
+       INNOVATION TRANSITION
+       ============================================= */
+
+    .innovation-transition__inner {
+        min-height: 640px;
+
+        padding-block: var(--section-space-xl);
+    }
+
+    .innovation-transition__system {
+        max-width: 720px;
+    }
+
+
+    /* =============================================
+       MENAH
+       ============================================= */
+
+    .menah__stage {
+        grid-template-columns: 1fr;
+
+        min-height: auto;
+
+        gap: var(--space-10);
+        padding: var(--space-8);
+    }
+
+    .menah__side {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        gap: var(--space-6);
+    }
+
+    .menah__side-group:last-child {
+        text-align: right;
+    }
+
+    .menah__side-text {
+        max-width: none;
+    }
+
+    .menah__diagram {
+        order: -1;
+
+        min-height: 520px;
+    }
+
+    .menah__annotation {
+        position: static;
+
+        max-width: none;
+
+        padding-top: var(--space-5);
+
+        text-align: left;
+    }
+
+
+    /* =============================================
+       NOOR
+       ============================================= */
+
+    .noor__inner {
+        padding-block: 140px 120px;
+    }
+
+    .noor__experience {
+        min-height: 560px;
+    }
+
+    .noor__orbit {
+        width: 410px;
+        height: 410px;
+    }
+
+    .noor__orbit--outer {
+        width: 540px;
+        height: 540px;
+    }
+
+    .noor__core {
+        width: 240px;
+        height: 240px;
+    }
+
+    .noor__orbit-node {
+        font-size: 9px;
+    }
+
+    .noor__stats {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .noor__capabilities {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* =============================================
+       NOOR PROCESS
+       ============================================= */
+
+    .noor-process__track {
+        padding-block: 0;
+    }
+
+    .noor-process__line {
+        left: 8px;
+        right: auto;
+        top: 0;
+        bottom: 0;
+
+        width: 1px;
+        height: auto;
+
+        transform: none;
+    }
+
+    .noor-process__progress {
+        left: 8px;
+        top: 0;
+
+        width: 1px;
+        height: 0;
+
+        transform: none;
+    }
+
+    .noor-process__steps {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+
+        padding-left: 48px;
+    }
+
+    .noor-process__step,
+    .noor-process__step:nth-child(even),
+    .noor-process__step:nth-child(odd) {
+        min-height: auto;
+
+        padding: 0 0 var(--space-8) !important;
+    }
+
+    .noor-process__step:last-child {
+        padding-bottom: 0 !important;
+    }
+
+    .noor-process__point {
+        left: -48px;
+        top: 0;
+
+        transform: none;
+    }
+
+    .noor-process__card {
+        max-width: none;
+    }
+
+
+    /* =============================================
+       MONITORING
+       ============================================= */
+
+    .monitoring__featured {
+        grid-template-columns: 1fr;
+    }
+
+    .monitoring__visual {
+        min-height: 460px;
+    }
+
+    .monitoring__featured-side {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .monitoring__visualization-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+
+    /* =============================================
+       HUMAN + AI
+       ============================================= */
+
+    .human-ai__flow {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        row-gap: var(--space-10);
+    }
+
+    .human-ai__item:nth-child(3)::after {
+        display: none;
+    }
+
+
+    /* =============================================
+       FUTURE
+       ============================================= */
+
+    .future__inner {
+        min-height: 760px;
+    }
+
+    .future__stages {
+        grid-template-columns: 1fr;
+    }
+
+    .future__stage {
+        min-height: 240px;
+
+        border-top:
+            var(--border-width-thin)
+            solid
+            var(--color-border);
+    }
+
+    .future__stage:not(:last-child) {
+        border-right: 0;
+    }
+
+    .future__connector {
+        display: none;
+    }
+
+
+    /* =============================================
+       ACADEMIC
+       ============================================= */
+
+    .academic__layout {
+        grid-template-columns: 1fr;
+
+        gap: var(--space-12);
+    }
+
+    .academic__intro {
+        position: static;
+    }
+
+
+    /* =============================================
+       COLLABORATION
+       ============================================= */
+
+    .collaboration__layout {
+        grid-template-columns: 1fr;
+
+        gap: var(--space-12);
+    }
+
+    .collaboration__content {
+        max-width: 820px;
+    }
+
+
+    /* =============================================
+       VIDEO
+       ============================================= */
+
+    .video-section__header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+
+    /* =============================================
+       FINAL CTA
+       ============================================= */
+
+    .final-cta__inner {
+        min-height: 650px;
+    }
+
+
+    /* =============================================
+       FOOTER
+       ============================================= */
+
+    .site-footer__top {
+        grid-template-columns: 1fr;
+    }
+
+    .site-footer__links {
+        justify-content: flex-start;
+    }
+}
+
+
+/* =========================================================
+   04. TABLET — 768px AND BELOW
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    html {
+        scroll-padding-top: var(--header-height-mobile);
+    }
+
+
+    /* =============================================
+       GLOBAL
+       ============================================= */
+
+    .container,
+    .container--narrow,
+    .container--compact,
+    .container--full {
+        width: calc(100% - (var(--page-padding-mobile) * 2));
+    }
+
+    .section__inner {
+        padding-block: var(--section-space-mobile-md);
+    }
+
+
+    /* =============================================
+       HEADER
+       ============================================= */
+
+    .site-header__inner {
+        min-height: var(--header-height-mobile);
+    }
+
+    .site-header__mobile-menu {
+        inset: var(--header-height-mobile) 0 0;
+
+        padding:
+            var(--space-8)
+            var(--page-padding-mobile)
+            var(--space-10);
+    }
+
+
+    /* =============================================
+       HERO
+       ============================================= */
+
+    .hero__inner {
+        padding-top: calc(
+            var(--header-height-mobile) + var(--space-13)
+        );
+        padding-bottom: var(--section-space-mobile-lg);
+
+        gap: var(--space-12);
+    }
+
+    .hero__eyebrow {
+        margin-bottom: var(--space-6);
+    }
+
+    .hero__title {
+        font-size: clamp(3rem, 11vw, 5rem);
+        line-height: 0.92;
+    }
+
+    .hero__role {
+        margin-top: var(--space-7);
+    }
+
+    .hero__statement {
+        margin-top: var(--space-6);
+
+        font-size: 1.15rem;
+    }
+
+    .hero__actions {
+        margin-top: var(--space-8);
+    }
+
+    .hero__scroll {
+        margin-top: var(--space-8);
+    }
+
+    .hero__visual {
+        min-height: 460px;
+    }
+
+    .hero__portrait-wrap {
+        width: min(100%, 460px);
+    }
+
+    .hero__data-node {
+        font-size: 9px;
+    }
+
+    .hero__data-node--one {
+        right: 0;
+        top: 9%;
+    }
+
+    .hero__data-node--two {
+        left: 0;
+        bottom: 9%;
+    }
+
+    .hero__visual-line--one {
+        width: 120px;
+        right: -45px;
+    }
+
+    .hero__visual-line--two {
+        width: 110px;
+        left: -45px;
+    }
+
+    .hero__orb {
+        width: 360px;
+        height: 360px;
+    }
+
+
+    /* =============================================
+       IDENTITY
+       ============================================= */
+
+    .identity__inner {
+        padding-block: var(--section-space-mobile-lg);
+    }
+
+    .identity__intro {
+        margin-bottom: var(--space-10);
+    }
+
+    .identity__pillar {
+        min-height: 200px;
+
+        padding: var(--card-padding-md);
+    }
+
+
+    /* =============================================
+       JOURNEY
+       ============================================= */
+
+    .journey__inner {
+        padding-block: var(--section-space-mobile-lg);
+    }
+
+    .journey__header {
+        margin-bottom: var(--space-10);
+    }
+
+
+    /* =============================================
+       EXPERTISE
+       ============================================= */
+
+    .expertise__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .expertise__item {
+        min-height: 200px;
+
+        padding: var(--card-padding-md);
+    }
+
+    .expertise__index {
+        margin-bottom: var(--space-7);
+    }
+
+
+    /* =============================================
+       INNOVATION TRANSITION
+       ============================================= */
+
+    .innovation-transition__inner {
+        min-height: 580px;
+
+        padding-block: var(--section-space-mobile-lg);
+    }
+
+    .innovation-transition__title {
+        font-size: clamp(2.8rem, 11vw, 5rem);
+    }
+
+    .innovation-transition__system {
+        margin-top: var(--space-10);
+    }
+
+    .innovation-transition__item {
+        min-height: 46px;
+
+        padding-inline: 12px;
+
+        font-size: 9px;
+    }
+
+    .innovation-transition__result {
+        margin-top: var(--space-9);
+    }
+
+
+    /* =============================================
+       MENAH
+       ============================================= */
+
+    .menah__inner {
+        padding-block: var(--section-space-mobile-lg);
+    }
+
+    .menah__header {
+        margin-bottom: var(--space-10);
+    }
+
+    .menah__stage {
+        gap: var(--space-8);
+
+        padding: var(--space-5);
+
+        border-radius: var(--radius-xl);
+    }
+
+    .menah__diagram {
+        min-height: 470px;
+    }
+
+    .menah__node {
+        width: min(100%, 270px);
+
+        min-height: 54px;
+
+        font-size: 9px;
+    }
+
+    .menah__node--primary {
+        min-height: 64px;
+    }
+
+    .menah__side {
+        grid-template-columns: 1fr;
+    }
+
+    .menah__side-group:last-child {
+        text-align: left;
+    }
+
+
+    /* =============================================
+       NOOR
+       ============================================= */
+
+    .noor__inner {
+        padding-block: 110px 90px;
+    }
+
+    .noor__header {
+        margin-bottom: var(--space-10);
+    }
+
+    .noor__title {
+        font-size: clamp(3.6rem, 16vw, 6rem);
+    }
+
+    .noor__subtitle {
+        margin-top: var(--space-6);
+
+        font-size: 1rem;
+    }
+
+    .noor__experience {
+        min-height: 460px;
+
+        margin-top: var(--space-10);
+    }
+
+    .noor__orbit {
+        width: 310px;
+        height: 310px;
+    }
+
+    .noor__orbit--outer {
+        width: 410px;
+        height: 410px;
+    }
+
+    .noor__core {
+        width: 190px;
+        height: 190px;
+    }
+
+    .noor__core-name {
+        font-size: 1.6rem;
+    }
+
+    .noor__orbit-node {
+        padding: 7px 9px;
+
+        font-size: 7px;
+    }
+
+    .noor__orbit-node--two {
+        right: -5%;
+    }
+
+    .noor__orbit-node--three {
+        right: -10%;
+    }
+
+    .noor__orbit-node--five {
+        left: -10%;
+    }
+
+    .noor__orbit-node--six {
+        left: -5%;
+    }
+
+    .noor__stats {
+        grid-template-columns: 1fr;
+
+        margin-top: var(--space-12);
+    }
+
+    .noor__capabilities {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .noor__capability {
+        min-height: 130px;
+    }
+
+    .noor__capability-title {
+        margin-top: var(--space-6);
+    }
+
+
+    /* =============================================
+       NOOR PROCESS
+       ============================================= */
+
+    .noor-process__inner {
+        padding-block: var(--section-space-mobile-lg);
+    }
+
+    .noor-process__header {
+        margin-bottom: var(--space-10);
+    }
+
+
+    /* =============================================
+       MONITORING
+       ============================================= */
+
+    .monitoring__inner {
+        padding-block: var(--section-space-mobile-lg);
+    }
+
+    .monitoring__header {
+        margin-bottom: var(--space-10);
+    }
+
+    .monitoring__featured {
+        gap: var(--grid-gap-sm);
+    }
+
+    .monitoring__visual {
+        min-height: 360px;
+
+        padding: var(--card-padding-md);
+    }
+
+    .monitoring__chart {
+        left: 5%;
+        right: 5%;
+
+        height: 120px;
+    }
+
+    .monitoring__featured-side {
+        grid-template-columns: 1fr;
+    }
+
+    .monitoring__mini {
+        min-height: 170px;
+    }
+
+    .monitoring__visualization-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .monitoring__data-card {
+        min-height: 200px;
+    }
+
+
+    /* =============================================
+       HUMAN + AI
+       ============================================= */
+
+    .human-ai__inner {
+        padding-block: var(--section-space-mobile-lg);
+    }
+
+    .human-ai__header {
+        margin-bottom: var(--space-10);
+    }
+
+    .human-ai__flow {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+
+        row-gap: var(--space-9);
+    }
+
+    .human-ai__item {
+        min-height: 150px;
+
+        padding-inline: 10px;
+    }
+
+    .human-ai__item::after {
+        display: none !important;
+    }
+
+    .human-ai__node {
+        width: 66px;
+        height: 66px;
+
+        font-size: 8px;
+    }
+
+
+    /* =============================================
+       FUTURE
+       ============================================= */
+
+    .future__inner {
+        min-height: 680px;
+
+        padding-block: var(--section-space-mobile-lg);
+    }
+
+    .future__title {
+        font-size: clamp(3rem, 13vw, 5rem);
+    }
+
+    .future__stages {
+        margin-top: var(--space-12);
+    }
+
+    .future__stage {
+        min-height: 190px;
+
+        padding: var(--card-padding-md);
+    }
+
+    .future__stage-number {
+        margin-bottom: var(--space-8);
+    }
+
+    .future__vision-note {
+        margin-top: var(--space-10);
+
+        font-size: 1rem;
+    }
+
+
+    /* =============================================
+       ACADEMIC
+       ============================================= */
+
+    .academic__inner {
+        padding-block: var(--section-space-mobile-lg);
+    }
+
+    .academic__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .academic__item {
+        min-height: 180px;
+
+        padding: var(--card-padding-md);
+    }
+
+    .academic__number {
+        margin-bottom: var(--space-7);
+    }
+
+
+    /* =============================================
+       COLLABORATION
+       ============================================= */
+
+    .collaboration__inner {
+        padding-block: var(--section-space-mobile-lg);
+    }
+
+    .collaboration__title {
+        font-size: clamp(3rem, 13vw, 5.2rem);
+    }
+
+    .collaboration__description {
+        font-size: 1rem;
+    }
+
+    .collaboration__fields {
+        grid-template-columns: 1fr;
+    }
+
+    .collaboration__field {
+        min-height: 72px;
+    }
+
+
+    /* =============================================
+       VIDEO
+       ============================================= */
+
+    .video-section__inner {
+        padding-block: var(--section-space-mobile-lg);
+    }
+
+    .video-section__header {
+        margin-bottom: var(--space-7);
+    }
+
+    .video-section__frame {
+        border-radius: var(--radius-xl);
+    }
+
+    .video-section__meta {
+        left: var(--card-padding-sm);
+        bottom: var(--card-padding-sm);
+
+        font-size: 9px;
+    }
+
+
+    /* =============================================
+       FINAL CTA
+       ============================================= */
+
+    .final-cta__inner {
+        min-height: 580px;
+
+        padding-block: var(--section-space-mobile-lg);
+    }
+
+    .final-cta__title {
+        font-size: clamp(3rem, 13vw, 5.2rem);
+    }
+
+    .final-cta__description {
+        font-size: 1rem;
+    }
+
+    .final-cta__meta {
+        margin-top: var(--space-9);
+    }
+
+
+    /* =============================================
+       FOOTER
+       ============================================= */
+
+    .site-footer__inner {
+        padding-block: var(--space-12) var(--space-7);
+    }
+
+    .site-footer__links {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--space-4);
+    }
+
+    .site-footer__bottom {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+
+/* =========================================================
+   05. MOBILE — 576px AND BELOW
+   ========================================================= */
+
+@media (max-width: 576px) {
+
+    .container,
+    .container--narrow,
+    .container--compact,
+    .container--full {
+        width: calc(100% - (var(--page-padding-small) * 2));
+    }
+
+
+    /* =============================================
+       GLOBAL
+       ============================================= */
+
+    .section__inner {
+        padding-block: var(--section-space-mobile-sm);
+    }
+
+    .section-divider {
+        margin-bottom: var(--space-6);
+    }
+
+    .section-divider__line {
+        width: 36px;
+    }
+
+
+    /* =============================================
+       HEADER
+       ============================================= */
+
+    .site-header__brand {
+        font-size: 0.82rem;
+    }
+
+    .site-header__menu-toggle {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    /* =============================================
+       HERO
+       ============================================= */
+
+    .hero__inner {
+        padding-top: calc(
+            var(--header-height-mobile) + var(--space-10)
+        );
+        padding-bottom: var(--space-12);
+
+        gap: var(--space-9);
+    }
+
+    .hero__title {
+        font-size: clamp(2.8rem, 14vw, 4.25rem);
+        letter-spacing: -0.05em;
+    }
+
+    .hero__role {
+        gap: 5px;
+        margin-top: var(--space-6);
+    }
+
+    .hero__role-primary {
+        font-size: 1rem;
+    }
+
+    .hero__role-secondary {
+        font-size: 0.82rem;
+    }
+
+    .hero__statement {
+        font-size: 1rem;
+        line-height: 1.45;
+    }
+
+    .hero__actions {
+        width: 100%;
+    }
+
+    .hero__scroll {
+        margin-top: var(--space-7);
+    }
+
+    .hero__visual {
+        min-height: 390px;
+    }
+
+    .hero__portrait-wrap {
+        width: 100%;
+        max-width: 390px;
+    }
+
+    .hero__visual-frame {
+        inset: 4% 2% 4% 0;
+    }
+
+    .hero__data-node--one,
+    .hero__data-node--two {
+        padding: 7px 9px;
+
+        font-size: 7px;
+    }
+
+    .hero__data-node--one {
+        top: 8%;
+        right: -2px;
+    }
+
+    .hero__data-node--two {
+        left: -2px;
+        bottom: 8%;
+    }
+
+    .hero__visual-line--one,
+    .hero__visual-line--two {
+        display: none;
+    }
+
+    .hero__orb {
+        width: 300px;
+        height: 300px;
+    }
+
+
+    /* =============================================
+       IDENTITY
+       ============================================= */
+
+    .identity__pillar {
+        min-height: 175px;
+
+        padding: var(--card-padding-sm);
+    }
+
+
+    /* =============================================
+       JOURNEY
+       ============================================= */
+
+    .journey__items {
+        padding-left: 34px;
+    }
+
+    .journey__node-wrap,
+    .journey__item:nth-child(even) .journey__node-wrap {
+        left: -34px;
+    }
+
+    .journey__track,
+    .journey__progress {
+        left: 5px;
+    }
+
+    .journey__card {
+        padding: var(--card-padding-sm);
+    }
+
+
+    /* =============================================
+       EXPERTISE
+       ============================================= */
+
+    .expertise__item {
+        min-height: 175px;
+
+        padding: var(--card-padding-sm);
+    }
+
+    .expertise__title {
+        font-size: 1.45rem;
+    }
+
+
+    /* =============================================
+       INNOVATION
+       ============================================= */
+
+    .innovation-transition__inner {
+        min-height: 520px;
+    }
+
+    .innovation-transition__system {
+        gap: 8px;
+
+        justify-content: flex-start;
+    }
+
+    .innovation-transition__item {
+        min-height: 42px;
+
+        font-size: 8px;
+        letter-spacing: 0.06em;
+    }
+
+    .innovation-transition__operator {
+        font-size: 1rem;
+    }
+
+
+    /* =============================================
+       MENAH
+       ============================================= */
+
+    .menah__stage {
+        padding: var(--space-4);
+    }
+
+    .menah__diagram {
+        min-height: 430px;
+    }
+
+    .menah__node {
+        max-width: 250px;
+
+        min-height: 50px;
+
+        padding-inline: 10px;
+
+        font-size: 8px;
+    }
+
+    .menah__node--primary {
+        min-height: 60px;
+    }
+
+    .menah__connector {
+        height: 32px;
+    }
+
+
+    /* =============================================
+       NOOR
+       ============================================= */
+
+    .noor__inner {
+        padding-block: 90px 76px;
+    }
+
+    .noor__experience {
+        min-height: 370px;
+    }
+
+    .noor__orbit {
+        width: 250px;
+        height: 250px;
+    }
+
+    .noor__orbit--outer {
+        width: 330px;
+        height: 330px;
+    }
+
+    .noor__core {
+        width: 150px;
+        height: 150px;
+    }
+
+    .noor__core::before {
+        inset: 18px;
+    }
+
+    .noor__core::after {
+        inset: -15px;
+    }
+
+    .noor__core-name {
+        font-size: 1.3rem;
+    }
+
+    .noor__core-state {
+        font-size: 7px;
+    }
+
+    .noor__orbit-node {
+        padding: 5px 6px;
+
+        font-size: 6px;
+    }
+
+    .noor__orbit-node::before {
+        width: 4px;
+        height: 4px;
+    }
+
+    .noor__orbit-node--one {
+        top: -1%;
+    }
+
+    .noor__orbit-node--two {
+        right: -8%;
+        top: 18%;
+    }
+
+    .noor__orbit-node--three {
+        right: -14%;
+        bottom: 15%;
+    }
+
+    .noor__orbit-node--four {
+        bottom: -1%;
+    }
+
+    .noor__orbit-node--five {
+        left: -14%;
+        bottom: 15%;
+    }
+
+    .noor__orbit-node--six {
+        left: -8%;
+        top: 18%;
+    }
+
+    .noor__stats {
+        gap: var(--space-3);
+    }
+
+    .noor__capabilities {
+        gap: var(--space-3);
+    }
+
+    .noor__capability {
+        min-height: 115px;
+
+        padding: var(--card-padding-sm);
+    }
+
+    .noor__capability-title {
+        margin-top: var(--space-5);
+
+        font-size: 0.85rem;
+    }
+
+
+    /* =============================================
+       MONITORING
+       ============================================= */
+
+    .monitoring__visual {
+        min-height: 300px;
+
+        padding: var(--card-padding-sm);
+    }
+
+    .monitoring__visual-title {
+        font-size: 0.9rem;
+    }
+
+    .monitoring__chart {
+        height: 85px;
+    }
+
+    .monitoring__mini {
+        min-height: 150px;
+
+        padding: var(--card-padding-sm);
+    }
+
+    .monitoring__mini-value {
+        font-size: 2rem;
+    }
+
+    .monitoring__data-card {
+        min-height: 175px;
+
+        padding: var(--card-padding-sm);
+    }
+
+
+    /* =============================================
+       HUMAN + AI
+       ============================================= */
+
+    .human-ai__flow {
+        grid-template-columns: 1fr;
+
+        row-gap: 0;
+    }
+
+    .human-ai__item {
+        min-height: 125px;
+
+        flex-direction: row;
+        justify-content: flex-start;
+
+        gap: var(--space-4);
+
+        padding: 0;
+
+        text-align: left;
+    }
+
+    .human-ai__item::before {
+        content: "";
+
+        position: absolute;
+        left: 32px;
+        top: 76px;
+
+        width: 1px;
+        height: 49px;
+
+        background: var(--color-border);
+    }
+
+    .human-ai__item:last-child::before {
+        display: none;
+    }
+
+    .human-ai__node {
+        width: 64px;
+        height: 64px;
+
+        flex: 0 0 64px;
+    }
+
+    .human-ai__title {
+        max-width: none;
+
+        margin-top: 0;
+    }
+
+
+    /* =============================================
+       FUTURE
+       ============================================= */
+
+    .future__inner {
+        min-height: 620px;
+    }
+
+    .future__stage {
+        min-height: 175px;
+
+        padding: var(--card-padding-sm);
+    }
+
+    .future__stage-title {
+        font-size: 1.65rem;
+    }
+
+
+    /* =============================================
+       ACADEMIC
+       ============================================= */
+
+    .academic__item {
+        min-height: 160px;
+
+        padding: var(--card-padding-sm);
+    }
+
+
+    /* =============================================
+       COLLABORATION
+       ============================================= */
+
+    .collaboration__fields {
+        gap: 8px;
+    }
+
+    .collaboration__field {
+        min-height: 64px;
+
+        padding: 15px;
+    }
+
+
+    /* =============================================
+       VIDEO
+       ============================================= */
+
+    .video-section__frame {
+        border-radius: var(--radius-lg);
+    }
+
+    .video-section__meta {
+        display: none;
+    }
+
+
+    /* =============================================
+       FINAL CTA
+       ============================================= */
+
+    .final-cta__inner {
+        min-height: 520px;
+    }
+
+    .final-cta__meta {
+        gap: 8px;
+
+        font-size: 8px;
+    }
+
+    .final-cta__meta::before,
+    .final-cta__meta::after {
+        width: 18px;
+    }
+
+
+    /* =============================================
+       FOOTER
+       ============================================= */
+
+    .site-footer__bottom {
+        gap: var(--space-3);
+    }
+}
+
+
+/* =========================================================
+   06. VERY SMALL MOBILE — 390px AND BELOW
+   ========================================================= */
+
+@media (max-width: 390px) {
+
+    html {
+        font-size: 15px;
+    }
+
+    .container,
+    .container--narrow,
+    .container--compact,
+    .container--full {
+        width: calc(100% - 32px);
+    }
+
+
+    /* =============================================
+       HEADER
+       ============================================= */
+
+    .site-header__brand {
+        font-size: 0.75rem;
+        letter-spacing: 0.07em;
+    }
+
+
+    /* =============================================
+       HERO
+       ============================================= */
+
+    .hero__inner {
+        padding-top: calc(
+            var(--header-height-mobile) + 40px
+        );
+    }
+
+    .hero__title {
+        font-size: clamp(2.65rem, 14vw, 3.5rem);
+    }
+
+    .hero__statement {
+        font-size: 0.95rem;
+    }
+
+    .hero__visual {
+        min-height: 340px;
+    }
+
+    .hero__data-node {
+        display: none;
+    }
+
+    .hero__visual-frame {
+        inset: 3% 0;
+    }
+
+
+    /* =============================================
+       INNOVATION
+       ============================================= */
+
+    .innovation-transition__title {
+        font-size: clamp(2.5rem, 13vw, 3.5rem);
+    }
+
+    .innovation-transition__item {
+        padding-inline: 8px;
+
+        font-size: 7px;
+    }
+
+
+    /* =============================================
+       MENAH
+       ============================================= */
+
+    .menah__node {
+        max-width: 220px;
+
+        font-size: 7px;
+    }
+
+
+    /* =============================================
+       NOOR
+       ============================================= */
+
+    .noor__experience {
+        min-height: 330px;
+    }
+
+    .noor__orbit {
+        width: 215px;
+        height: 215px;
+    }
+
+    .noor__orbit--outer {
+        width: 285px;
+        height: 285px;
+    }
+
+    .noor__core {
+        width: 128px;
+        height: 128px;
+    }
+
+    .noor__core-name {
+        font-size: 1.1rem;
+    }
+
+    .noor__orbit-node {
+        padding: 4px 5px;
+
+        font-size: 5px;
+    }
+
+    .noor__capabilities {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* =============================================
+       HUMAN + AI
+       ============================================= */
+
+    .human-ai__item {
+        min-height: 112px;
+    }
+
+    .human-ai__item::before {
+        left: 29px;
+        top: 70px;
+        height: 42px;
+    }
+
+    .human-ai__node {
+        width: 58px;
+        height: 58px;
+
+        flex-basis: 58px;
+    }
+
+
+    /* =============================================
+       BUTTONS
+       ============================================= */
+
+    .button-group .btn {
+        min-height: 48px;
+    }
+}
+
+
+/* =========================================================
+   07. HEIGHT-CONSTRAINED DESKTOPS
+   ========================================================= */
+
+@media (min-width: 993px) and (max-height: 760px) {
+
+    .hero__inner {
+        padding-top: calc(
+            var(--header-height-desktop) + 30px
+        );
+        padding-bottom: 50px;
+    }
+
+    .hero__visual {
+        min-height: 470px;
+    }
+
+    .hero__scroll {
+        margin-top: var(--space-8);
+    }
+}
+
+
+/* =========================================================
+   08. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .hero__visual-line,
+    .hero__orb,
+    .noor__orbit,
+    .future::before,
+    .section-atmosphere__glow {
+        animation: none !important;
+        transition: none !important;
+    }
+
+    .journey__progress,
+    .noor-process__progress,
+    .system-connector::after {
+        transition: none !important;
+    }
+}
+
+
+/* =========================================================
+   END OF RESPONSIVE.CSS
+   ========================================================= */
+
+/* =========================================================
+   09. MOBILE HARDENING / CROSS-DEVICE SAFETY
+   ---------------------------------------------------------
+   Final safety layer for narrow screens.
+   Prevents clipped content, fixed-size diagrams,
+   oversized controls and accidental horizontal overflow.
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        min-width: 0;
+    }
+
+    .section {
+        overflow: hidden;
+    }
+
+    .container,
+    .container--narrow,
+    .container--compact,
+    .container--full {
+        width: calc(100% - (var(--page-padding-mobile) * 2));
+        max-width: none;
+        margin-inline: auto;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    a,
+    span,
+    li {
+        overflow-wrap: anywhere;
+    }
+
+    .site-header {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .site-header__inner {
+        width: 100%;
+        min-width: 0;
+        gap: 12px;
+    }
+
+    .site-header__brand {
+        min-width: 0;
+        max-width: calc(100% - 58px);
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .site-header__menu-toggle {
+        flex: 0 0 auto;
+    }
+
+    .site-header__mobile-menu {
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .hero__inner {
+        width: 100%;
+        min-width: 0;
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hero__content,
+    .hero__visual {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .hero__visual {
+        overflow: hidden;
+    }
+
+    .hero__portrait-wrap {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero__visual-frame {
+        inset: 4% 0;
+    }
+
+    .button-group {
+        width: 100%;
+        align-items: stretch;
+    }
+
+    .button-group .btn {
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+        white-space: normal;
+        text-align: center;
+    }
+
+    .innovation-transition__system {
+        width: 100%;
+        max-width: 100%;
+        justify-content: center;
+        align-items: stretch;
+    }
+
+    .innovation-transition__item {
+        max-width: 100%;
+        min-width: 0;
+        white-space: normal;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .menah__stage {
+        width: 100%;
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .menah__side {
+        min-width: 0;
+    }
+
+    .menah__side-group,
+    .menah__side-text {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .menah__diagram {
+        width: 100%;
+        min-width: 0;
+        overflow: hidden;
+    }
+
+    .menah__node {
+        max-width: min(100%, 270px);
+        white-space: normal;
+        overflow-wrap: anywhere;
+        text-align: center;
+    }
+
+    .noor__experience {
+        width: 100%;
+        min-width: 0;
+        min-height: clamp(300px, 88vw, 460px);
+        overflow: hidden;
+        contain: layout paint;
+    }
+
+    .noor__orbit {
+        width: min(310px, 76vw);
+        height: min(310px, 76vw);
+    }
+
+    .noor__orbit--outer {
+        width: min(410px, 92vw);
+        height: min(410px, 92vw);
+    }
+
+    .noor__core {
+        width: min(190px, 43vw);
+        height: min(190px, 43vw);
+    }
+
+    .noor__core::before {
+        inset: clamp(12px, 4vw, 28px);
+    }
+
+    .noor__core::after {
+        inset: clamp(-16px, -3vw, -8px);
+    }
+
+    .noor__orbit-node {
+        max-width: min(30vw, 118px);
+        padding: 6px 8px;
+        font-size: clamp(5px, 1.5vw, 7px);
+        line-height: 1.25;
+        white-space: normal;
+        text-align: center;
+        overflow-wrap: anywhere;
+    }
+
+    .noor__orbit-node--one {
+        top: 1%;
+        left: 50%;
+    }
+
+    .noor__orbit-node--two {
+        top: 20%;
+        right: 1%;
+    }
+
+    .noor__orbit-node--three {
+        bottom: 17%;
+        right: 1%;
+    }
+
+    .noor__orbit-node--four {
+        bottom: 1%;
+        left: 50%;
+    }
+
+    .noor__orbit-node--five {
+        bottom: 17%;
+        left: 1%;
+    }
+
+    .noor__orbit-node--six {
+        top: 20%;
+        left: 1%;
+    }
+
+    .noor__stats,
+    .noor__capabilities,
+    .monitoring__featured,
+    .monitoring__featured-side,
+    .monitoring__visualization-grid,
+    .academic__layout,
+    .academic__grid,
+    .collaboration__layout,
+    .collaboration__fields,
+    .future__stages {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .noor__stat,
+    .noor__capability,
+    .monitoring__data-card,
+    .monitoring__mini,
+    .academic__item,
+    .collaboration__field,
+    .future__stage {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .noor-process__track,
+    .noor-process__steps,
+    .noor-process__step,
+    .noor-process__card {
+        min-width: 0;
+        max-width: 100%;
+    }
+
+    .noor-process__card {
+        width: 100%;
+    }
+
+    .monitoring__visual {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .monitoring__chart {
+        left: 4%;
+        right: 4%;
+        width: auto;
+        max-width: none;
+    }
+
+    .monitoring__data-visual {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .human-ai__flow {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .human-ai__item {
+        min-width: 0;
+    }
+
+    .human-ai__title {
+        width: auto;
+        max-width: 100%;
+        min-width: 0;
+        overflow-wrap: anywhere;
+    }
+
+    .future__stage-title {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+
+    .video-section__frame {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .video-section__frame video,
+    .video-section__poster {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .final-cta__inner {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .site-footer__top,
+    .site-footer__bottom,
+    .site-footer__identity,
+    .site-footer__links {
+        min-width: 0;
+        max-width: 100%;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .container,
+    .container--narrow,
+    .container--compact,
+    .container--full {
+        width: calc(100% - (var(--page-padding-small) * 2));
+    }
+
+    .site-header__brand {
+        max-width: calc(100% - 54px);
+    }
+
+    .hero__inner {
+        gap: var(--space-8);
+    }
+
+    .hero__actions .button-group {
+        gap: 10px;
+    }
+
+    .hero__visual {
+        min-height: 350px;
+    }
+
+    .hero__orb {
+        width: min(300px, 82vw);
+        height: min(300px, 82vw);
+        right: 50%;
+        transform: translate(50%, -50%);
+        opacity: 0.72;
+    }
+
+    .innovation-transition__system {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .innovation-transition__operator {
+        line-height: 1;
+    }
+
+    .menah__side {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+
+    .menah__side-group:last-child {
+        text-align: left;
+    }
+
+    .menah__diagram {
+        min-height: 390px;
+    }
+
+    .menah__node {
+        width: min(100%, 260px);
+    }
+
+    .noor__experience {
+        min-height: clamp(300px, 92vw, 370px);
+    }
+
+    .noor__orbit {
+        width: min(250px, 70vw);
+        height: min(250px, 70vw);
+    }
+
+    .noor__orbit--outer {
+        width: min(330px, 88vw);
+        height: min(330px, 88vw);
+    }
+
+    .noor__core {
+        width: min(150px, 42vw);
+        height: min(150px, 42vw);
+    }
+
+    .noor__orbit-node {
+        max-width: 27vw;
+        padding: 5px 6px;
+        font-size: clamp(5px, 1.55vw, 6px);
+    }
+
+    .noor__capabilities {
+        grid-template-columns: 1fr;
+    }
+
+    .noor__stats {
+        gap: var(--space-3);
+    }
+
+    .monitoring__visual {
+        min-height: 285px;
+    }
+
+    .monitoring__chart {
+        top: 54%;
+        height: 78px;
+    }
+
+    .future__stage-title {
+        font-size: clamp(1.45rem, 7vw, 1.8rem);
+    }
+
+    .data-status {
+        max-width: 100%;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
+    .site-footer__links {
+        width: 100%;
+    }
+
+    .site-footer__link {
+        max-width: 100%;
+        overflow-wrap: anywhere;
+    }
+}
+
+
+@media (max-width: 390px) {
+
+    .container,
+    .container--narrow,
+    .container--compact,
+    .container--full {
+        width: calc(100% - 32px);
+    }
+
+    .hero__title {
+        font-size: clamp(2.45rem, 13vw, 3.4rem);
+    }
+
+    .hero__visual {
+        min-height: 315px;
+    }
+
+    .hero__orb {
+        width: min(270px, 84vw);
+        height: min(270px, 84vw);
+    }
+
+    .innovation-transition__title {
+        font-size: clamp(2.35rem, 12vw, 3.2rem);
+    }
+
+    .menah__diagram {
+        min-height: 360px;
+    }
+
+    .menah__node {
+        max-width: min(100%, 230px);
+        font-size: 6.5px;
+    }
+
+    .noor__experience {
+        min-height: 300px;
+    }
+
+    .noor__orbit {
+        width: min(215px, 67vw);
+        height: min(215px, 67vw);
+    }
+
+    .noor__orbit--outer {
+        width: min(285px, 86vw);
+        height: min(285px, 86vw);
+    }
+
+    .noor__core {
+        width: min(128px, 40vw);
+        height: min(128px, 40vw);
+    }
+
+    .noor__orbit-node {
+        max-width: 24vw;
+        padding: 4px 5px;
+        font-size: 5px;
+    }
+
+    .human-ai__node {
+        width: 58px;
+        height: 58px;
+        flex-basis: 58px;
+    }
+
+    .button-group .btn {
+        min-height: 48px;
+        font-size: 0.9rem;
+    }
+}
+/* =========================================================
+   FINAL MOBILE NAVBAR FIX
+   Add this at the VERY BOTTOM of responsive.css
+========================================================= */
+
+@media (max-width: 992px) {
+
+    /* ---------- Header ---------- */
+
+    .site-header {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+
+        width: 100% !important;
+
+        z-index: 1000 !important;
+
+        padding-top: 10px;
+    }
+
+    .site-header .container {
+        width: calc(100% - 32px) !important;
+        max-width: none !important;
+        margin-inline: auto;
+    }
+
+    .site-header__inner {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        width: 100% !important;
+        min-width: 0 !important;
+
+        min-height: 60px !important;
+
+        padding: 7px 9px 7px 16px !important;
+
+        border-radius: 18px !important;
+
+        overflow: visible !important;
+    }
+
+    /* ---------- Brand ---------- */
+
+    .site-header__brand {
+        display: inline-flex !important;
+        align-items: center !important;
+
+        flex: 0 0 auto !important;
+        width: auto !important;
+        max-width: none !important;
+        min-width: 0 !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        overflow: visible !important;
+
+        white-space: nowrap !important;
+        text-overflow: clip !important;
+
+        font-size: 0.76rem !important;
+        letter-spacing: 0.075em !important;
+
+        line-height: 1 !important;
+    }
+
+    /* ---------- Hamburger ---------- */
+
+    .site-header__menu-toggle {
+        display: inline-flex !important;
+        flex: 0 0 42px !important;
+
+        width: 42px !important;
+        min-width: 42px !important;
+        height: 42px !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        border-radius: 12px !important;
+    }
+
+    /* ---------- Mobile Menu ---------- */
+
+    .site-header__mobile-menu {
+        position: fixed !important;
+
+        top: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
+        left: 0 !important;
+
+        width: 100vw !important;
+        height: 100dvh !important;
+        max-height: none !important;
+
+        box-sizing: border-box !important;
+
+        z-index: 900 !important;
+
+        display: flex !important;
+        flex-direction: column !important;
+
+        padding:
+            84px
+            20px
+            24px !important;
+
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+
+        background:
+            rgba(3, 11, 20, 0.98) !important;
+
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+
+        transform: translateY(-12px) !important;
+
+        -webkit-overflow-scrolling: touch;
+
+        transition:
+            opacity 0.28s ease,
+            visibility 0.28s ease,
+            transform 0.28s ease;
+    }
+
+    .site-header__mobile-menu.is-open {
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+
+        transform: translateY(0) !important;
+    }
+
+    /* ---------- All Links ---------- */
+
+    .site-header__mobile-links {
+        display: flex !important;
+        flex-direction: column !important;
+
+        width: 100% !important;
+        height: auto !important;
+        flex: 0 0 auto !important;
+
+        margin: 0 !important;
+        padding: 0 !important;
+
+        border-top: 1px solid
+            rgba(255, 255, 255, 0.08);
+
+        overflow: visible !important;
+    }
+
+    .site-header__mobile-link {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        width: 100% !important;
+        min-width: 0 !important;
+        min-height: 58px !important;
+        height: 58px !important;
+
+        flex: 0 0 58px !important;
+
+        margin: 0 !important;
+        padding:
+            0
+            4px !important;
+
+        box-sizing: border-box !important;
+
+        border-bottom: 1px solid
+            rgba(255, 255, 255, 0.08);
+
+        color: var(--color-text-soft) !important;
+
+        font-family: var(--font-display) !important;
+        font-size: 1rem !important;
+        font-weight: 500 !important;
+
+        line-height: 1 !important;
+
+        white-space: nowrap !important;
+
+        text-decoration: none !important;
+
+        overflow: visible !important;
+    }
+
+    .site-header__mobile-link:last-child {
+        border-bottom: 0;
+    }
+
+    .site-header__mobile-link:hover,
+    .site-header__mobile-link.is-active {
+        color: var(--color-primary) !important;
+        padding-left: 8px !important;
+    }
+
+    /* ---------- Mobile CTA ---------- */
+
+    .site-header__mobile-cta {
+        width: 100% !important;
+
+        margin-top: 18px !important;
+        padding: 0 !important;
+
+        flex: 0 0 auto !important;
+    }
+
+    .site-header__mobile-cta .btn {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        width: 100% !important;
+        min-height: 52px !important;
+
+        box-sizing: border-box !important;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .site-header .container {
+        width: calc(100% - 24px) !important;
+    }
+
+    .site-header__inner {
+        min-height: 56px !important;
+        padding-left: 14px !important;
+    }
+
+    .site-header__brand {
+        font-size: 0.70rem !important;
+        letter-spacing: 0.065em !important;
+    }
+
+    .site-header__mobile-menu {
+        padding:
+            78px
+            16px
+            20px !important;
+    }
+
+    .site-header__mobile-link {
+        min-height: 54px !important;
+        height: 54px !important;
+        flex-basis: 54px !important;
+
+        font-size: 0.98rem !important;
+    }
+}

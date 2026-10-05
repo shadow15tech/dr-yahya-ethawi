@@ -1,0 +1,513 @@
+/* =========================================================
+   DR. YAHYA ETHAWI
+   PREMIUM HEALTHCARE + INNOVATION WEBSITE
+   GLOBAL BASE STYLES
+   ========================================================= */
+
+
+/* =========================================================
+   01. DOCUMENT
+   ========================================================= */
+
+html {
+    background: var(--color-bg);
+    color: var(--color-text);
+
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: var(--line-height-normal);
+
+    scroll-behavior: smooth;
+    scroll-padding-top: var(--header-height-desktop);
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    text-rendering: optimizeLegibility;
+}
+
+
+/* =========================================================
+   02. BODY
+   ========================================================= */
+
+body {
+    min-width: 320px;
+    min-height: 100vh;
+
+    background: var(--color-bg);
+    color: var(--color-text);
+
+    font-family: var(--font-body);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-regular);
+    line-height: var(--line-height-normal);
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   03. PAGE ROOT
+   ========================================================= */
+
+body,
+main {
+    position: relative;
+}
+
+main {
+    width: 100%;
+}
+
+
+/* =========================================================
+   04. GLOBAL CONTAINER
+   ========================================================= */
+
+.container {
+    width: min(
+        calc(100% - (var(--page-padding-desktop) * 2)),
+        var(--container-2xl)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* Narrow reading container */
+
+.container--narrow {
+    width: min(
+        calc(100% - (var(--page-padding-desktop) * 2)),
+        var(--measure-lg)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* Small content container */
+
+.container--compact {
+    width: min(
+        calc(100% - (var(--page-padding-desktop) * 2)),
+        var(--measure-md)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* Full-width container */
+
+.container--full {
+    width: min(
+        calc(100% - (var(--page-padding-desktop) * 2)),
+        var(--container-full)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   05. SECTION FOUNDATION
+   ========================================================= */
+
+section {
+    position: relative;
+    width: 100%;
+}
+
+
+/* =========================================================
+   06. GLOBAL TYPOGRAPHY
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-text);
+
+    font-family: var(--font-display);
+    font-weight: var(--font-weight-semibold);
+
+    line-height: var(--line-height-heading);
+    letter-spacing: var(--letter-spacing-heading);
+
+    text-wrap: balance;
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+}
+
+h5 {
+    font-size: var(--font-size-h5);
+}
+
+h6 {
+    font-size: var(--font-size-h6);
+}
+
+
+/* =========================================================
+   07. DISPLAY TYPOGRAPHY
+   ========================================================= */
+
+.display-xl {
+    font-family: var(--font-display);
+    font-size: var(--font-size-display-xl);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-display);
+    letter-spacing: var(--letter-spacing-tight);
+
+    text-wrap: balance;
+}
+
+.display-lg {
+    font-family: var(--font-display);
+    font-size: var(--font-size-display-lg);
+    font-weight: var(--font-weight-bold);
+    line-height: var(--line-height-display);
+    letter-spacing: var(--letter-spacing-tight);
+
+    text-wrap: balance;
+}
+
+.display-md {
+    font-family: var(--font-display);
+    font-size: var(--font-size-display-md);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-display);
+    letter-spacing: var(--letter-spacing-tight);
+
+    text-wrap: balance;
+}
+
+
+/* =========================================================
+   08. PARAGRAPHS
+   ========================================================= */
+
+p {
+    color: var(--color-text-soft);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-relaxed);
+
+    text-wrap: pretty;
+}
+
+.lead {
+    max-width: var(--measure-lg);
+
+    color: var(--color-text-soft);
+    font-size: var(--font-size-body-lg);
+    line-height: var(--line-height-relaxed);
+}
+
+.text-muted {
+    color: var(--color-text-muted);
+}
+
+.text-soft {
+    color: var(--color-text-soft);
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+
+/* =========================================================
+   09. TEXT WIDTH UTILITIES
+   ========================================================= */
+
+.text-width-xs {
+    max-width: var(--measure-xs);
+}
+
+.text-width-sm {
+    max-width: var(--measure-sm);
+}
+
+.text-width-md {
+    max-width: var(--measure-md);
+}
+
+.text-width-lg {
+    max-width: var(--measure-lg);
+}
+
+.text-width-xl {
+    max-width: var(--measure-xl);
+}
+
+
+/* =========================================================
+   10. LINKS
+   ========================================================= */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:not([class]) {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    text-underline-offset: 0.2em;
+
+    transition:
+        color var(--transition-fast),
+        text-decoration-color var(--transition-fast);
+}
+
+a:not([class]):hover {
+    color: var(--color-primary-soft);
+    text-decoration-color: currentColor;
+}
+
+
+/* =========================================================
+   11. STRONG / EMPHASIS
+   ========================================================= */
+
+strong,
+b {
+    color: var(--color-text);
+    font-weight: var(--font-weight-semibold);
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+
+/* =========================================================
+   12. SMALL / CAPTION
+   ========================================================= */
+
+small {
+    font-size: var(--font-size-body-xs);
+}
+
+
+/* =========================================================
+   13. MONOSPACE
+   ========================================================= */
+
+code,
+kbd,
+samp,
+pre {
+    font-family: var(--font-mono);
+}
+
+
+/* =========================================================
+   14. IMAGES
+   ========================================================= */
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+
+/* =========================================================
+   15. SVG
+   ========================================================= */
+
+svg {
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   16. INTERACTIVE ELEMENTS
+   ========================================================= */
+
+button,
+a,
+input,
+textarea,
+select,
+summary {
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+/* =========================================================
+   17. ACCESSIBLE FOCUS
+   ========================================================= */
+
+:focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 4px;
+}
+
+
+/* =========================================================
+   18. DISABLED STATES
+   ========================================================= */
+
+button:disabled,
+input:disabled,
+textarea:disabled,
+select:disabled {
+    cursor: not-allowed;
+    opacity: 0.55;
+}
+
+
+/* =========================================================
+   19. TEXT SELECTION
+   ========================================================= */
+
+::selection {
+    background: var(--color-primary);
+    color: var(--color-bg-deep);
+}
+
+
+/* =========================================================
+   20. PLACEHOLDER
+   ========================================================= */
+
+::placeholder {
+    color: var(--color-text-muted);
+    opacity: 1;
+}
+
+
+/* =========================================================
+   21. SCROLLBAR
+   ========================================================= */
+
+html {
+    scrollbar-width: thin;
+    scrollbar-color:
+        var(--color-surface-light)
+        var(--color-bg);
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-bg);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-surface-light);
+    border-radius: var(--radius-pill);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+}
+
+
+/* =========================================================
+   22. VISUALLY HIDDEN
+   ---------------------------------------------------------
+   Useful for accessible labels that should remain available
+   to assistive technologies without appearing visually.
+   ========================================================= */
+
+.visually-hidden {
+    position: absolute !important;
+
+    width: 1px;
+    height: 1px;
+
+    padding: 0;
+    margin: -1px;
+
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+
+    border: 0;
+}
+
+
+/* =========================================================
+   23. CONTENT VISIBILITY
+   ========================================================= */
+
+.content-visibility-auto {
+    content-visibility: auto;
+}
+
+
+/* =========================================================
+   24. GLOBAL OVERFLOW PROTECTION
+   ========================================================= */
+
+iframe,
+embed,
+object {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   25. FORM TEXT
+   ========================================================= */
+
+label {
+    color: var(--color-text-soft);
+    font-size: var(--font-size-body-sm);
+}
+
+
+/* =========================================================
+   26. HORIZONTAL RULE
+   ========================================================= */
+
+hr {
+    width: 100%;
+    color: var(--color-border);
+}
+
+
+/* =========================================================
+   27. REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

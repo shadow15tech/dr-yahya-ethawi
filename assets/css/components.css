@@ -1,0 +1,1401 @@
+/* =========================================================
+   DR. YAHYA ETHAWI
+   PREMIUM HEALTHCARE + INNOVATION WEBSITE
+   REUSABLE COMPONENTS
+   ========================================================= */
+
+
+/* =========================================================
+   01. SECTION HEADER
+   ========================================================= */
+
+.section-header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+
+    max-width: var(--measure-xl);
+}
+
+.section-header--split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(280px, 0.7fr);
+    gap: var(--grid-gap-xl);
+
+    align-items: end;
+}
+
+.section-header__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+
+    width: fit-content;
+
+    color: var(--color-primary);
+    font-family: var(--font-body);
+    font-size: var(--font-size-label);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--letter-spacing-label);
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.section-header__eyebrow::before {
+    content: "";
+
+    width: 28px;
+    height: 1px;
+
+    background: var(--color-primary);
+    flex: 0 0 auto;
+}
+
+.section-header__title {
+    max-width: var(--measure-xl);
+}
+
+.section-header__description {
+    max-width: var(--measure-md);
+}
+
+
+/* =========================================================
+   02. EYEBROW / MICRO LABEL
+   ========================================================= */
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+
+    width: fit-content;
+
+    color: var(--color-primary);
+    font-size: var(--font-size-label);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--letter-spacing-label);
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.eyebrow--muted {
+    color: var(--color-text-muted);
+}
+
+.eyebrow--light {
+    color: var(--color-text-soft);
+}
+
+.eyebrow__line {
+    width: 24px;
+    height: 1px;
+
+    background: currentColor;
+}
+
+
+/* =========================================================
+   03. BUTTON BASE
+   ========================================================= */
+
+.btn {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-3);
+
+    min-height: var(--button-height-md);
+    padding-inline: var(--button-padding-x-md);
+
+    border:
+        var(--border-width-thin)
+        solid
+        transparent;
+
+    border-radius: var(--button-radius);
+
+    font-family: var(--font-body);
+    font-size: var(--font-size-body-sm);
+    font-weight: var(--font-weight-semibold);
+    line-height: 1;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    transition:
+        color var(--transition-base),
+        background-color var(--transition-base),
+        border-color var(--transition-base),
+        box-shadow var(--transition-base),
+        transform var(--transition-base);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+
+/* Primary */
+
+.btn--primary {
+    background: var(--color-primary);
+    color: var(--color-bg-deep);
+
+    box-shadow: var(--shadow-xs);
+}
+
+.btn--primary:hover {
+    background: var(--color-primary-soft);
+    box-shadow: var(--glow-primary);
+    transform: translateY(-2px);
+}
+
+
+/* Secondary */
+
+.btn--secondary {
+    background: transparent;
+    color: var(--color-text);
+
+    border-color: var(--color-border);
+}
+
+.btn--secondary:hover {
+    border-color: var(--color-border-strong);
+    background: rgba(57, 208, 214, 0.05);
+    color: var(--color-primary-soft);
+
+    transform: translateY(-2px);
+}
+
+
+/* Ghost */
+
+.btn--ghost {
+    min-height: auto;
+    padding: 0;
+
+    background: transparent;
+    border-color: transparent;
+
+    color: var(--color-text-soft);
+}
+
+.btn--ghost:hover {
+    color: var(--color-primary-soft);
+}
+
+
+/* Small */
+
+.btn--sm {
+    min-height: var(--button-height-sm);
+    padding-inline: var(--button-padding-x-sm);
+
+    font-size: var(--font-size-body-xs);
+}
+
+
+/* Large */
+
+.btn--lg {
+    min-height: var(--button-height-lg);
+    padding-inline: var(--button-padding-x-lg);
+}
+
+
+/* Button icon */
+
+.btn__icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 18px;
+    height: 18px;
+
+    flex: 0 0 auto;
+
+    transition:
+        transform var(--transition-base);
+}
+
+.btn:hover .btn__icon--arrow {
+    transform: translate(3px, -3px);
+}
+
+
+/* =========================================================
+   04. BUTTON GROUP
+   ========================================================= */
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.button-group--tight {
+    gap: var(--space-3);
+}
+
+
+/* =========================================================
+   05. CARD BASE
+   ========================================================= */
+
+.card {
+    position: relative;
+
+    background: var(--color-surface);
+
+    border: var(--card-border);
+    border-radius: var(--card-radius);
+
+    box-shadow: var(--shadow-xs);
+
+    overflow: hidden;
+
+    transition:
+        border-color var(--transition-base),
+        background-color var(--transition-base),
+        box-shadow var(--transition-base),
+        transform var(--transition-base);
+}
+
+.card:hover {
+    border-color: var(--color-border-strong);
+    box-shadow: var(--shadow-sm);
+    transform: translateY(-3px);
+}
+
+
+/* Card inner */
+
+.card__inner {
+    position: relative;
+    z-index: var(--z-content);
+
+    padding: var(--card-padding-md);
+}
+
+
+/* No hover lift */
+
+.card--static:hover {
+    border-color: var(--color-border);
+    box-shadow: var(--shadow-xs);
+    transform: none;
+}
+
+
+/* Interactive */
+
+.card--interactive {
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   06. GLASS CARD
+   ========================================================= */
+
+.glass-card {
+    position: relative;
+
+    background: var(--glass-bg);
+
+    border:
+        var(--border-width-thin)
+        solid
+        var(--glass-border);
+
+    border-radius: var(--card-radius);
+
+    backdrop-filter: blur(var(--blur-md));
+    -webkit-backdrop-filter: blur(var(--blur-md));
+
+    box-shadow: var(--shadow-sm);
+}
+
+.glass-card::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    border-radius: inherit;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.045),
+            transparent 42%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   07. CARD LABEL
+   ========================================================= */
+
+.card-label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+
+    color: var(--color-primary);
+
+    font-size: var(--font-size-label);
+    font-weight: var(--font-weight-semibold);
+    letter-spacing: var(--letter-spacing-label);
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.card-label__dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+    background: currentColor;
+
+    box-shadow: var(--glow-primary);
+}
+
+
+/* =========================================================
+   08. STAT COMPONENT
+   ========================================================= */
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.stat__value {
+    color: var(--color-text);
+
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: var(--font-weight-semibold);
+    line-height: 0.95;
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.stat__value--accent {
+    color: var(--color-primary);
+}
+
+.stat__label {
+    color: var(--color-text-soft);
+
+    font-size: var(--font-size-body-sm);
+    line-height: var(--line-height-tight);
+}
+
+
+/* Compact stat */
+
+.stat--compact {
+    gap: var(--space-2);
+}
+
+.stat--compact .stat__value {
+    font-size: clamp(2rem, 3vw, 3rem);
+}
+
+
+/* =========================================================
+   09. STAT CARD
+   ========================================================= */
+
+.stat-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 180px;
+    padding: var(--card-padding-md);
+
+    background: var(--color-surface);
+
+    border:
+        var(--border-width-thin)
+        solid
+        var(--color-border);
+
+    border-radius: var(--card-radius);
+
+    overflow: hidden;
+
+    transition:
+        border-color var(--transition-base),
+        background-color var(--transition-base),
+        transform var(--transition-base);
+}
+
+.stat-card:hover {
+    border-color: var(--color-border-strong);
+    background: var(--color-surface-light);
+
+    transform: translateY(-3px);
+}
+
+.stat-card__index {
+    color: var(--color-text-muted);
+
+    font-family: var(--font-mono);
+    font-size: var(--font-size-caption);
+    letter-spacing: var(--letter-spacing-wide);
+}
+
+.stat-card__value {
+    color: var(--color-text);
+
+    font-family: var(--font-display);
+    font-size: clamp(2.25rem, 4vw, 4rem);
+    font-weight: var(--font-weight-semibold);
+    line-height: 0.95;
+    letter-spacing: var(--letter-spacing-tight);
+}
+
+.stat-card__value span {
+    color: var(--color-primary);
+}
+
+.stat-card__label {
+    max-width: 180px;
+
+    color: var(--color-text-soft);
+    font-size: var(--font-size-body-sm);
+}
+
+
+/* =========================================================
+   10. BADGE
+   ========================================================= */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+
+    min-height: 30px;
+    padding-inline: 10px;
+
+    border:
+        var(--border-width-thin)
+        solid
+        var(--color-border);
+
+    border-radius: var(--radius-pill);
+
+    background: rgba(255, 255, 255, 0.025);
+
+    color: var(--color-text-soft);
+
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--letter-spacing-wide);
+    line-height: 1;
+
+    white-space: nowrap;
+}
+
+.badge--accent {
+    border-color: var(--color-border-strong);
+    color: var(--color-primary-soft);
+    background: rgba(57, 208, 214, 0.06);
+}
+
+
+/* =========================================================
+   11. PILL
+   ========================================================= */
+
+.pill {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+
+    width: fit-content;
+    padding: 8px 12px;
+
+    border-radius: var(--radius-pill);
+
+    background: var(--color-surface);
+    border: var(--border-width-thin) solid var(--color-border);
+
+    color: var(--color-text-soft);
+
+    font-size: var(--font-size-body-xs);
+    line-height: 1;
+}
+
+
+/* =========================================================
+   12. INDEX / NUMBER
+   ========================================================= */
+
+.index-number {
+    color: var(--color-primary);
+
+    font-family: var(--font-mono);
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-medium);
+    letter-spacing: var(--letter-spacing-wide);
+    line-height: 1;
+}
+
+
+/* =========================================================
+   13. DIVIDER
+   ========================================================= */
+
+.divider {
+    width: 100%;
+    height: 1px;
+
+    background: var(--color-border);
+}
+
+.divider--soft {
+    background: var(--color-border-soft);
+}
+
+.divider--accent {
+    background: var(--color-border-strong);
+}
+
+
+/* =========================================================
+   14. ICON BUTTON
+   ========================================================= */
+
+.icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 44px;
+    height: 44px;
+
+    border:
+        var(--border-width-thin)
+        solid
+        var(--color-border);
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    color: var(--color-text);
+
+    transition:
+        color var(--transition-base),
+        background-color var(--transition-base),
+        border-color var(--transition-base),
+        transform var(--transition-base);
+}
+
+.icon-button:hover {
+    color: var(--color-primary);
+    background: rgba(57, 208, 214, 0.07);
+    border-color: var(--color-border-strong);
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   15. CIRCLE ACTION
+   ========================================================= */
+
+.circle-action {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    background: var(--color-primary);
+    color: var(--color-bg-deep);
+
+    box-shadow: var(--shadow-xs);
+
+    transition:
+        background-color var(--transition-base),
+        box-shadow var(--transition-base),
+        transform var(--transition-base);
+}
+
+.circle-action:hover {
+    background: var(--color-primary-soft);
+    box-shadow: var(--glow-primary);
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   16. MEDIA FRAME
+   ========================================================= */
+
+.media-frame {
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: var(--ratio-wide);
+
+    overflow: hidden;
+
+    background: var(--color-surface);
+
+    border:
+        var(--border-width-thin)
+        solid
+        var(--color-border);
+
+    border-radius: var(--radius-xl);
+}
+
+.media-frame img,
+.media-frame video,
+.media-frame iframe {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* Cinematic */
+
+.media-frame--cinematic {
+    aspect-ratio: var(--ratio-cinematic);
+}
+
+
+/* Portrait */
+
+.media-frame--portrait {
+    aspect-ratio: var(--ratio-portrait);
+}
+
+
+/* =========================================================
+   17. MEDIA OVERLAY
+   ========================================================= */
+
+.media-frame__overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 40%,
+            rgba(3, 11, 20, 0.78) 100%
+        );
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   18. PLAY BUTTON
+   ========================================================= */
+
+.play-button {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 68px;
+    height: 68px;
+
+    transform: translate(-50%, -50%);
+
+    border:
+        var(--border-width-thin)
+        solid
+        rgba(255, 255, 255, 0.24);
+
+    border-radius: 50%;
+
+    background: rgba(3, 11, 20, 0.68);
+
+    color: var(--color-primary-soft);
+
+    backdrop-filter: blur(var(--blur-sm));
+    -webkit-backdrop-filter: blur(var(--blur-sm));
+
+    transition:
+        border-color var(--transition-base),
+        background-color var(--transition-base),
+        transform var(--transition-base),
+        box-shadow var(--transition-base);
+}
+
+.play-button:hover {
+    border-color: var(--color-primary);
+    background: rgba(57, 208, 214, 0.12);
+
+    transform: translate(-50%, -50%) scale(1.06);
+
+    box-shadow: var(--glow-primary);
+}
+
+
+/* =========================================================
+   19. TIMELINE NODE
+   ========================================================= */
+
+.timeline-node {
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 14px;
+    height: 14px;
+
+    flex: 0 0 auto;
+
+    border:
+        2px
+        solid
+        var(--color-text-muted);
+
+    border-radius: 50%;
+
+    background: var(--color-bg);
+
+    transition:
+        border-color var(--transition-base),
+        background-color var(--transition-base),
+        box-shadow var(--transition-base),
+        transform var(--transition-base);
+}
+
+.timeline-node::after {
+    content: "";
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    transition:
+        background-color var(--transition-base);
+}
+
+.timeline-node.is-active,
+.timeline-node:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--glow-primary);
+
+    transform: scale(1.15);
+}
+
+.timeline-node.is-active::after {
+    background: var(--color-primary);
+}
+
+
+/* =========================================================
+   20. TIMELINE LABEL
+   ========================================================= */
+
+.timeline-label {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.timeline-label__meta {
+    color: var(--color-primary);
+
+    font-family: var(--font-mono);
+    font-size: var(--font-size-caption);
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
+}
+
+.timeline-label__title {
+    color: var(--color-text);
+
+    font-family: var(--font-display);
+    font-size: var(--font-size-h5);
+    font-weight: var(--font-weight-semibold);
+    line-height: var(--line-height-tight);
+}
+
+
+/* =========================================================
+   21. DATA STATUS
+   ========================================================= */
+
+.data-status {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+
+    color: var(--color-text-muted);
+
+    font-family: var(--font-mono);
+    font-size: var(--font-size-caption);
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
+}
+
+.data-status__indicator {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: var(--color-primary);
+
+    box-shadow: var(--glow-primary);
+}
+
+.data-status--concept .data-status__indicator {
+    background: var(--color-text-muted);
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   22. SYSTEM NODE
+   ========================================================= */
+
+.system-node {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+
+    min-height: 44px;
+    padding: 10px 14px;
+
+    border:
+        var(--border-width-thin)
+        solid
+        var(--color-border);
+
+    border-radius: var(--radius-md);
+
+    background: rgba(16, 38, 58, 0.72);
+
+    color: var(--color-text-soft);
+
+    font-size: var(--font-size-body-xs);
+    font-weight: var(--font-weight-medium);
+
+    transition:
+        border-color var(--transition-base),
+        background-color var(--transition-base),
+        color var(--transition-base);
+}
+
+.system-node:hover,
+.system-node.is-active {
+    border-color: var(--color-border-strong);
+
+    background: rgba(57, 208, 214, 0.06);
+
+    color: var(--color-text);
+}
+
+.system-node__indicator {
+    width: 7px;
+    height: 7px;
+
+    flex: 0 0 auto;
+
+    border-radius: 50%;
+
+    background: var(--color-primary);
+
+    box-shadow: var(--glow-primary);
+}
+
+
+/* =========================================================
+   23. SYSTEM CONNECTOR
+   ========================================================= */
+
+.system-connector {
+    position: relative;
+
+    width: 100%;
+    height: 1px;
+
+    background: var(--color-border);
+}
+
+.system-connector::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 0;
+
+    width: 0;
+    height: 1px;
+
+    transform: translateY(-50%);
+
+    background: var(--color-primary);
+
+    transition: width var(--transition-slower);
+}
+
+.system-connector.is-active::after {
+    width: 100%;
+}
+
+
+/* =========================================================
+   24. FEATURE ITEM
+   ========================================================= */
+
+.feature-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--space-4);
+}
+
+.feature-item__marker {
+    position: relative;
+
+    width: 8px;
+    height: 8px;
+
+    margin-top: 8px;
+
+    flex: 0 0 auto;
+
+    border-radius: 50%;
+
+    background: var(--color-primary);
+
+    box-shadow: var(--glow-primary);
+}
+
+.feature-item__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.feature-item__title {
+    color: var(--color-text);
+
+    font-family: var(--font-display);
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-semibold);
+}
+
+.feature-item__text {
+    color: var(--color-text-soft);
+    font-size: var(--font-size-body-sm);
+}
+
+
+/* =========================================================
+   25. QUOTE / STATEMENT
+   ========================================================= */
+
+.statement {
+    position: relative;
+
+    padding-left: var(--space-8);
+
+    border-left:
+        2px
+        solid
+        var(--color-primary);
+}
+
+.statement__text {
+    color: var(--color-text);
+
+    font-family: var(--font-display);
+    font-size: clamp(1.75rem, 3vw, 3rem);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.15;
+    letter-spacing: var(--letter-spacing-heading);
+}
+
+
+/* =========================================================
+   26. TEXT LINK
+   ========================================================= */
+
+.text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+
+    width: fit-content;
+
+    color: var(--color-text-soft);
+
+    font-size: var(--font-size-body-sm);
+    font-weight: var(--font-weight-semibold);
+
+    transition:
+        color var(--transition-base),
+        gap var(--transition-base);
+}
+
+.text-link:hover {
+    color: var(--color-primary-soft);
+    gap: var(--space-3);
+}
+
+.text-link__icon {
+    width: 16px;
+    height: 16px;
+
+    transition:
+        transform var(--transition-base);
+}
+
+.text-link:hover .text-link__icon {
+    transform: translate(2px, -2px);
+}
+
+
+/* =========================================================
+   27. VISUAL GRID / TECHNICAL BACKDROP
+   ========================================================= */
+
+.tech-grid {
+    position: absolute;
+    inset: 0;
+
+    pointer-events: none;
+
+    background-image:
+        linear-gradient(
+            to right,
+            var(--color-border-soft) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            to bottom,
+            var(--color-border-soft) 1px,
+            transparent 1px
+        );
+
+    background-size: 80px 80px;
+
+    mask-image:
+        linear-gradient(
+            to bottom,
+            black 0%,
+            rgba(0, 0, 0, 0.35) 65%,
+            transparent 100%
+        );
+
+    -webkit-mask-image:
+        linear-gradient(
+            to bottom,
+            black 0%,
+            rgba(0, 0, 0, 0.35) 65%,
+            transparent 100%
+        );
+}
+
+
+/* =========================================================
+   28. RADIAL GLOW
+   ========================================================= */
+
+.radial-glow {
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(57, 208, 214, 0.10) 0%,
+            rgba(57, 208, 214, 0.035) 36%,
+            transparent 72%
+        );
+
+    filter: blur(4px);
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   29. TECHNICAL LINE
+   ========================================================= */
+
+.tech-line {
+    width: 100%;
+    height: 1px;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--color-border-strong),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   30. STATUS CHIP
+   ========================================================= */
+
+.status-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+
+    min-height: 32px;
+    padding: 7px 11px;
+
+    border:
+        1px
+        solid
+        var(--color-border);
+
+    border-radius: var(--radius-sm);
+
+    background: rgba(255, 255, 255, 0.025);
+
+    color: var(--color-text-muted);
+
+    font-family: var(--font-mono);
+    font-size: var(--font-size-caption);
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
+}
+
+.status-chip__dot {
+    width: 5px;
+    height: 5px;
+
+    border-radius: 50%;
+
+    background: var(--color-primary);
+}
+
+
+/* =========================================================
+   31. SCROLL INDICATOR
+   ========================================================= */
+
+.scroll-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-3);
+
+    color: var(--color-text-muted);
+
+    font-family: var(--font-mono);
+    font-size: var(--font-size-caption);
+    letter-spacing: var(--letter-spacing-wide);
+    text-transform: uppercase;
+}
+
+.scroll-indicator__line {
+    position: relative;
+
+    width: 42px;
+    height: 1px;
+
+    background: var(--color-border);
+}
+
+.scroll-indicator__line::after {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 14px;
+    height: 1px;
+
+    background: var(--color-primary);
+}
+
+
+/* =========================================================
+   32. CONTENT STACK
+   ========================================================= */
+
+.content-stack {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-stack--xs {
+    gap: var(--space-2);
+}
+
+.content-stack--sm {
+    gap: var(--space-4);
+}
+
+.content-stack--md {
+    gap: var(--space-6);
+}
+
+.content-stack--lg {
+    gap: var(--space-8);
+}
+
+.content-stack--xl {
+    gap: var(--space-10);
+}
+
+
+/* =========================================================
+   33. INLINE GROUP
+   ========================================================= */
+
+.inline-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+}
+
+
+/* =========================================================
+   34. VISUAL ACCENT
+   ========================================================= */
+
+.visual-accent {
+    position: relative;
+
+    width: 48px;
+    height: 2px;
+
+    background: var(--color-primary);
+}
+
+.visual-accent::after {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    right: -8px;
+
+    width: 5px;
+    height: 5px;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background: var(--color-primary);
+}
+
+
+/* =========================================================
+   35. MOBILE / TABLET COMPONENT ADJUSTMENTS
+   ---------------------------------------------------------
+   Only component-level changes belong here.
+   Section layouts remain in responsive.css.
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .section-header--split {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+
+    .stat-card {
+        min-height: 160px;
+    }
+
+    .media-frame {
+        border-radius: var(--radius-lg);
+    }
+
+    .play-button {
+        width: 58px;
+        height: 58px;
+    }
+
+    .statement {
+        padding-left: var(--space-6);
+    }
+
+    .tech-grid {
+        background-size: 56px 56px;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .button-group {
+        width: 100%;
+        align-items: stretch;
+    }
+
+    .button-group .btn {
+        width: 100%;
+    }
+
+    .section-header {
+        gap: var(--space-5);
+    }
+
+    .card__inner {
+        padding: var(--card-padding-sm);
+    }
+
+    .stat-card {
+        min-height: 145px;
+        padding: var(--card-padding-sm);
+    }
+
+    .icon-button {
+        width: 42px;
+        height: 42px;
+    }
+
+    .circle-action {
+        width: 48px;
+        height: 48px;
+    }
+}

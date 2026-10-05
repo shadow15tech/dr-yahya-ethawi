@@ -1,0 +1,26 @@
+
+---
+
+# 2. `robots.txt`
+
+Use this:
+
+```txt
+# =========================================================
+# DR. YAHYA ETHAWI
+# ROBOTS CONFIGURATION
+# =========================================================
+
+User-agent: *
+Allow: /
+
+# Prevent crawling of development / system directories
+Disallow: /assets/docs/
+Disallow: /favicon/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Sitemap
+# IMPORTANT:
+# Replace the domain below with the final production domain.
+Sitemap: https://YOUR-DOMAIN.com/sitemap.xml

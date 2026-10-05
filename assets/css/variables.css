@@ -1,0 +1,360 @@
+/* =========================================================
+   DR. YAHYA ETHAWI
+   PREMIUM HEALTHCARE + INNOVATION WEBSITE
+   DESIGN TOKENS
+   ========================================================= */
+
+:root {
+
+    /* =====================================================
+       01. COLOR SYSTEM
+       Deep Clinical Technology
+       ===================================================== */
+
+    /* Backgrounds */
+    --color-bg: #06111F;
+    --color-bg-soft: #0B1C2D;
+    --color-bg-deep: #030B14;
+
+    /* Surfaces */
+    --color-surface: #10263A;
+    --color-surface-light: #16344A;
+    --color-surface-glass: rgba(16, 38, 58, 0.72);
+
+    /* Primary Accent */
+    --color-primary: #39D0D6;
+    --color-primary-soft: #74E5E7;
+
+    /* Text */
+    --color-text: #F4F8FB;
+    --color-text-soft: #B7C7D4;
+    --color-text-muted: #7890A3;
+
+    /* Borders */
+    --color-border: rgba(255, 255, 255, 0.10);
+    --color-border-soft: rgba(255, 255, 255, 0.06);
+    --color-border-strong: rgba(57, 208, 214, 0.28);
+
+    /* Overlays */
+    --color-overlay-dark: rgba(3, 11, 20, 0.72);
+    --color-overlay-deep: rgba(3, 11, 20, 0.88);
+
+    /* Utility */
+    --color-white: #FFFFFF;
+    --color-black: #000000;
+
+    /* =====================================================
+       02. TYPOGRAPHY
+       ===================================================== */
+
+    /* Font Families */
+    --font-display: "Manrope", sans-serif;
+    --font-body: "Inter", sans-serif;
+    --font-mono: "IBM Plex Mono", monospace;
+
+    /* Font Weights */
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+
+    /* Display Sizes */
+    --font-size-display-xl: clamp(4rem, 8vw, 8rem);
+    --font-size-display-lg: clamp(3.5rem, 6vw, 6.5rem);
+    --font-size-display-md: clamp(3rem, 5vw, 5rem);
+
+    /* Heading Sizes */
+    --font-size-h1: clamp(3rem, 5vw, 5.5rem);
+    --font-size-h2: clamp(2.5rem, 4vw, 4.5rem);
+    --font-size-h3: clamp(1.75rem, 2.5vw, 2.75rem);
+    --font-size-h4: clamp(1.35rem, 2vw, 2rem);
+    --font-size-h5: 1.25rem;
+    --font-size-h6: 1rem;
+
+    /* Body Sizes */
+    --font-size-body-lg: 1.125rem;
+    --font-size-body: 1rem;
+    --font-size-body-sm: 0.9375rem;
+    --font-size-body-xs: 0.8125rem;
+
+    /* Labels / Metadata */
+    --font-size-label: 0.75rem;
+    --font-size-caption: 0.6875rem;
+
+    /* Line Heights */
+    --line-height-display: 0.96;
+    --line-height-heading: 1.08;
+    --line-height-tight: 1.2;
+    --line-height-normal: 1.5;
+    --line-height-relaxed: 1.65;
+    --line-height-loose: 1.8;
+
+    /* Letter Spacing */
+    --letter-spacing-tight: -0.04em;
+    --letter-spacing-heading: -0.025em;
+    --letter-spacing-normal: 0;
+    --letter-spacing-wide: 0.08em;
+    --letter-spacing-label: 0.12em;
+    --letter-spacing-caps: 0.16em;
+
+    /* =====================================================
+       03. CONTAINER SYSTEM
+       ===================================================== */
+
+    --container-xs: 480px;
+    --container-sm: 640px;
+    --container-md: 768px;
+    --container-lg: 1024px;
+    --container-xl: 1200px;
+    --container-2xl: 1360px;
+    --container-full: 1600px;
+
+    /* Horizontal Page Padding */
+    --page-padding-desktop: 64px;
+    --page-padding-laptop: 48px;
+    --page-padding-tablet: 32px;
+    --page-padding-mobile: 20px;
+    --page-padding-small: 16px;
+
+    /* =====================================================
+       04. GRID
+       ===================================================== */
+
+    --grid-columns-desktop: 12;
+    --grid-columns-tablet: 8;
+    --grid-columns-mobile: 4;
+
+    --grid-gap-xl: 32px;
+    --grid-gap-lg: 28px;
+    --grid-gap-md: 24px;
+    --grid-gap-sm: 16px;
+    --grid-gap-xs: 12px;
+
+    /* =====================================================
+       05. SPACING SCALE
+       ===================================================== */
+
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 20px;
+    --space-6: 24px;
+    --space-7: 28px;
+    --space-8: 32px;
+    --space-9: 40px;
+    --space-10: 48px;
+    --space-11: 56px;
+    --space-12: 64px;
+    --space-13: 72px;
+    --space-14: 80px;
+    --space-15: 96px;
+    --space-16: 112px;
+    --space-17: 128px;
+    --space-18: 144px;
+    --space-19: 160px;
+    --space-20: 192px;
+
+    /* =====================================================
+       06. SECTION SPACING
+       ===================================================== */
+
+    --section-space-xl: 160px;
+    --section-space-lg: 136px;
+    --section-space-md: 112px;
+    --section-space-sm: 88px;
+    --section-space-xs: 64px;
+
+    /* Mobile Section Spacing */
+    --section-space-mobile-lg: 96px;
+    --section-space-mobile-md: 80px;
+    --section-space-mobile-sm: 64px;
+
+    /* =====================================================
+       07. BORDER RADIUS
+       ===================================================== */
+
+    --radius-xs: 4px;
+    --radius-sm: 6px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    --radius-2xl: 20px;
+    --radius-3xl: 28px;
+
+    --radius-pill: 999px;
+
+    /* =====================================================
+       08. BORDERS
+       ===================================================== */
+
+    --border-width-thin: 1px;
+    --border-width-medium: 2px;
+
+    /* =====================================================
+       09. SHADOW SYSTEM
+       ===================================================== */
+
+    --shadow-xs:
+        0 2px 8px rgba(0, 0, 0, 0.10);
+
+    --shadow-sm:
+        0 8px 24px rgba(0, 0, 0, 0.16);
+
+    --shadow-md:
+        0 16px 40px rgba(0, 0, 0, 0.22);
+
+    --shadow-lg:
+        0 24px 70px rgba(0, 0, 0, 0.30);
+
+    --shadow-accent:
+        0 0 40px rgba(57, 208, 214, 0.10);
+
+    /* =====================================================
+       10. GLOW SYSTEM
+       ===================================================== */
+
+    --glow-primary:
+        0 0 24px rgba(57, 208, 214, 0.18);
+
+    --glow-primary-strong:
+        0 0 50px rgba(57, 208, 214, 0.22);
+
+    --glow-soft:
+        0 0 80px rgba(116, 229, 231, 0.08);
+
+    /* =====================================================
+       11. TRANSITIONS
+       ===================================================== */
+
+    --transition-fast:
+        180ms cubic-bezier(0.22, 1, 0.36, 1);
+
+    --transition-base:
+        300ms cubic-bezier(0.22, 1, 0.36, 1);
+
+    --transition-slow:
+        500ms cubic-bezier(0.22, 1, 0.36, 1);
+
+    --transition-slower:
+        800ms cubic-bezier(0.22, 1, 0.36, 1);
+
+    /* =====================================================
+       12. EASING
+       ===================================================== */
+
+    --ease-standard:
+        cubic-bezier(0.22, 1, 0.36, 1);
+
+    --ease-smooth:
+        cubic-bezier(0.65, 0, 0.35, 1);
+
+    --ease-linear:
+        linear;
+
+    /* =====================================================
+       13. Z-INDEX SYSTEM
+       ===================================================== */
+
+    --z-behind: -1;
+    --z-base: 1;
+    --z-content: 10;
+    --z-overlay: 20;
+    --z-header: 100;
+    --z-mobile-menu: 200;
+    --z-modal: 500;
+    --z-preloader: 1000;
+    --z-debug: 9999;
+
+    /* =====================================================
+       14. HEADER
+       ===================================================== */
+
+    --header-height-desktop: 88px;
+    --header-height-tablet: 80px;
+    --header-height-mobile: 72px;
+
+    /* =====================================================
+       15. BUTTONS
+       ===================================================== */
+
+    --button-height-sm: 42px;
+    --button-height-md: 50px;
+    --button-height-lg: 56px;
+
+    --button-padding-x-sm: 18px;
+    --button-padding-x-md: 24px;
+    --button-padding-x-lg: 30px;
+
+    --button-radius: var(--radius-md);
+
+    /* =====================================================
+       16. CARD SYSTEM
+       ===================================================== */
+
+    --card-padding-sm: 20px;
+    --card-padding-md: 28px;
+    --card-padding-lg: 36px;
+
+    --card-radius: var(--radius-xl);
+
+    --card-border:
+        1px solid var(--color-border);
+
+    /* =====================================================
+       17. CONTENT WIDTHS
+       ===================================================== */
+
+    --measure-xs: 420px;
+    --measure-sm: 560px;
+    --measure-md: 680px;
+    --measure-lg: 820px;
+    --measure-xl: 960px;
+
+    /* =====================================================
+       18. MEDIA / IMAGE RATIOS
+       ===================================================== */
+
+    --ratio-square: 1 / 1;
+    --ratio-portrait: 4 / 5;
+    --ratio-landscape: 16 / 10;
+    --ratio-wide: 16 / 9;
+    --ratio-cinematic: 21 / 9;
+
+    /* =====================================================
+       19. BACKDROP / GLASS
+       ===================================================== */
+
+    --blur-sm: 8px;
+    --blur-md: 16px;
+    --blur-lg: 24px;
+
+    --glass-bg:
+        rgba(11, 28, 45, 0.68);
+
+    --glass-border:
+        rgba(255, 255, 255, 0.08);
+
+    /* =====================================================
+       20. MOTION DISTANCES
+       ===================================================== */
+
+    --motion-distance-xs: 8px;
+    --motion-distance-sm: 16px;
+    --motion-distance-md: 32px;
+    --motion-distance-lg: 56px;
+    --motion-distance-xl: 80px;
+
+    /* =====================================================
+       21. RESPONSIVE BREAKPOINTS
+       ===================================================== */
+
+    --breakpoint-xs: 390px;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --breakpoint-2xl: 1440px;
+
+}

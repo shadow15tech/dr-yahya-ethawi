@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+>
+
+    <url>
+
+        <!-- Replace with the final production domain -->
+
+        <loc>https://YOUR-DOMAIN.com/</loc>
+
+        <!-- Update this date whenever the live page receives a major
+             content or structural update -->
+
+        <lastmod>2026-10-05</lastmod>
+
+        <changefreq>monthly</changefreq>
+
+        <priority>1.0</priority>
+
+    </url>
+
+</urlset>
